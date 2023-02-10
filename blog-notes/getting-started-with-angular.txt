@@ -1,0 +1,9 @@
+To get started with Angular, you will need to have Node.js and the Angular CLI (Command Line Interface) installed on your computer.
+
+Install Node.js by downloading the installer from the official website (https://nodejs.org/)
+Open the command prompt and run the command npm install -g @angular/cli to install the Angular CLI.
+Run the command ng new project-name to create a new Angular project with the name "project-name".
+Run the command cd project-name to navigate into the project directory.
+Run the command ng serve to start a local development server.
+Open a web browser and navigate to http://localhost:4200/ to see the running application.
+You can now start building your Angular application by editing the files in the "src" folder. To learn more about Angular, you can refer to the official documentation at (https://angular.io/docs)

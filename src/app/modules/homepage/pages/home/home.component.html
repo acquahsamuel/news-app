@@ -1,0 +1,21 @@
+<!-- <app-search-bar></app-search-bar> -->
+<div class="w-full min-h-screen font-sans text-gray-900">
+  <app-search-bx (searchEvent)="search()"></app-search-bx>
+  <!-- <div class="gap-6 pt-2 columns-3xs shadow-sm">
+    <app-blog-card
+      *ngFor="let article of articles"
+      [date]="article?.date"
+      [author]="article.author"
+      [title]="article.title"
+      [content]="article.content"
+      [urlToImage]="article.urlToImage"
+      [ur]="article.url"
+      [source]="article.source.id"
+      [description]="article.description"
+      [publishedAt]="article.publishedAt"
+    ></app-blog-card>
+  </div> -->
+  <app-blog-card></app-blog-card>
+</div>
+
+

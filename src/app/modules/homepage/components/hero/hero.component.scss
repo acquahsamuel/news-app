@@ -1,0 +1,14 @@
+ul {
+    div {
+        //   display: ;
+        list-style: square;
+        list-style: none;
+
+        display: inline-block;
+        border: 1px solid black;
+        margin: 3px 8px;
+        padding: 4px;
+        border-left: 4px solid black;
+        cursor: pointer;
+    }
+}

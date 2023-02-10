@@ -1,0 +1,39 @@
+<main class="py-1 px-4 mx-auto max-w-7xl">
+  <!-- <p> New Aggregator </p> -->
+  <div class="flex gap-x-8 items-center pt-12">
+    <a href="#" class="text-lg font-medium">Popular</a>
+    <a href="#" class="text-lg text-indigo-500">Recent</a>
+  </div>
+  <div class="gap-6 pt-2 columns-3xs" *ngIf="articles; else loading">
+    <figure
+      *ngFor="let article of articles; let i = index"
+      class="py-4 [break-inside:avoid]"
+    >
+      <img
+        class="rounded-md"
+        [src]="article.urlToImage"
+        [alt]="article.content"
+        (click)="goToLink(article.url)"
+      />
+      <figcaption class="mt-2" (click)="goToLink(article.url)">
+        {{ article.author }}
+      </figcaption>
+      <p class="text-sm text-gray-500 line-clamp-2">
+        {{ article.description }}
+      </p>
+      <p class="text-sm text-gray-500 line-clamp-2">
+        Tag: {{ article.source.id }},{{ article.source.name }}
+      </p>
+      <p class="text-sm text-gray-500 line-clamp-2">
+        {{ article.publishedAt | date : "medium" }}
+      </p>
+    </figure>
+  </div>
+  <div class="flex justify-center items-center py-12">
+    <!-- <  class="w-8 h-8 text-indigo-600 animate-spin" /> -->
+  </div>
+</main>
+
+<ng-template #loading>
+  <app-loading-spinner></app-loading-spinner>
+</ng-template>

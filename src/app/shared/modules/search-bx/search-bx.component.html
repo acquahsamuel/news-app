@@ -1,0 +1,38 @@
+
+<nav class="border-b border-gray-200">
+  <div class="px-4 mx-auto max-w-7xl">
+    <div class="flex gap-x-2 justify-between items-center md:gap-x-6 h-18">
+      <button class="inline-block md:hidden" href="#"></button>
+      <ul class="hidden text-gray-700 md:flex md:gap-x-8 md:items-center">
+        <li><a class="font-medium hover:text-gray-900" href="#">Feed</a></li>
+        <li><a class="hover:text-gray-900" href="#">Discover</a></li>
+        <li><a class="hover:text-gray-900" href="#">Community</a></li>
+      </ul>
+      <input
+        class="hidden sm:inline-block flex-1 py-1.5 px-4 mx-4 text-gray-700 bg-gray-100 rounded-full border border-gray-100 transition focus:outline-none focus:bg-white focus:border-gray-700"
+        type="text"
+        (input)="searchEvent($event)"
+        placeholder="Search"
+      />
+      <div class="flex flex-row-reverse gap-x-2 items-center md:gap-x-4 lg:flex-row">
+        <button class="hidden lg:inline-block"> # </button>
+        <button
+          class="hidden lg:inline-block py-1.5 px-5 rounded-full border border-gray-200"
+        >
+          Upload
+        </button>
+        <button
+          class="object-cover overflow-hidden w-10 h-10 rounded-full border border-gray-200"
+        >
+          <img src="/img/avatar-1.jpeg" alt="" />
+        </button>
+        <span class="flex gap-x-1 items-center">
+          <button class="text-sm leading-none hover:underline">1,331</button>
+        </span>
+        <span class="flex gap-x-1 items-center">
+          <button class="text-sm leading-none hover:underline">15.8k</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</nav>

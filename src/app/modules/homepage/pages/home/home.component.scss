@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+// .wrapper {
+//     margin: 0 auto;
+   
+// }
+
+.h1 {
+    font-size: 6rem;
+}
+
+.h-name {
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: rgb(151, 1, 59);
+    font-family: "Playfair Display", serif;
+}
+
+.h5 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.h3 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: "Playfair Display", serif;
+}
+
+.h2 {
+    font-weight: 400;
+    font-family: "Playfair Display", serif;
+}
+
+.tag {
+    color: rgb(136, 1, 53);
+    text-decoration: underline;
+}
+
+.p-4 {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 24px;
+}
+
+.main-heading {
+    display: flex;
+    justify-content: center;
+    padding: 4em 0;
+}
+
+.section-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .right-content {
+        width: 85rem;
+        border: 1px solid black;
+    }
+}
+
+@media (max-width: 922px) {
+    .wrapper {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .section-col {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        .right-content {
+            width: 100%;
+        }
+    }
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgba(21, 19, 147, 0.876);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+}
+
+.pulse {
+    animation: pulse-animation 2s infinite;
+}

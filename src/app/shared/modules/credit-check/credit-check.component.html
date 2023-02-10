@@ -1,0 +1,52 @@
+<form class="container">
+  <h4>Payment Checkout</h4>
+  <div>
+    <label for=""> Payee Name </label>
+    <input
+      type="text"
+      (input)="onNameChange($event.target.value)"
+      name=""
+      id=""
+      class="input"
+    />
+    {{ name | titlecase }}
+  </div>
+
+  <div>
+    <label for=""> Date </label>
+    <input
+      type="date"
+      (input)="onDateChange($event.target.value)"
+      name=""
+      id=""
+      class="input"
+    />
+    <p>{{ date | date : "MMMM d, y" }}</p>
+  </div>
+
+  <div>
+    <label for=""> Amount </label>
+    <input
+      type="number"
+      (input)="onAmountChange($event.target.value)"
+      name=""
+      id=""
+      class="input"
+    />
+    <p>{{ amount | currency : "GH" }}</p>
+  </div>
+
+  <div>
+    <label for=""> Height </label>
+    <input
+      type="number"
+      (input)="onHeightChange($event.target.value)"
+      name=""
+      id=""
+      class="input"
+    />
+    <p>{{ height | coverter : "m" | number : '1.0.2' }}</p>
+  </div>
+
+  <div></div>
+</form>

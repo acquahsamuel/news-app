@@ -1,0 +1,10 @@
+<div class="box">
+  <h5> Wikipedia Top Search </h5>
+  <form (submit)="onFormSubmit($event)">
+    <input
+      class="input"
+      placeholder="Enter search term"
+      (input)="term = $event.target.value"
+    />
+  </form>
+</div>

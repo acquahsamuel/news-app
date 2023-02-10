@@ -1,0 +1,16 @@
+.hide{
+    display: none;
+}
+
+.pending{
+    color:  rgb(152, 155, 152);
+}
+
+.correct{
+    color: green;
+}
+
+.incorrect{
+    color: red;
+    font-weight: 15px;
+}
