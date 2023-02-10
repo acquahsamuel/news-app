@@ -17,22 +17,12 @@ export class HomeComponent implements OnInit {
     this.getAllNews();
   }
 
-
   getAllNews() {
-    this.newService.getAllNews().subscribe((xresponse: any) => {
+    this.newService.getAppleNews().subscribe((xresponse: any) => {
       console.log(xresponse);
       this.articles = xresponse?.articles;
     });
   }
 
-  renderDescription(template: any) {
-    // template.innerHTML = this.articles.content;
-  }
-
-  getDetails(id: any) {
-    this.router.navigate(["/details", id]);
-  }
-
   search() {}
-
 }

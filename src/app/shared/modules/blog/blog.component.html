@@ -1,8 +1,13 @@
 <main class="py-1 px-4 mx-auto max-w-7xl">
-  <!-- <p> New Aggregator </p> -->
   <div class="flex gap-x-8 items-center pt-12">
-    <a href="#" class="text-lg font-medium">Popular</a>
-    <a href="#" class="text-lg text-indigo-500">Recent</a>
+    <a
+      class="text-lg font-medium"
+      *ngFor="let category of categories; let i = index"
+      (click)="categoriesFilter(category)"
+       routerLinkActive="category"
+      >{{ category }}</a
+    >
+    <!-- <a href="#" class="text-lg text-indigo-500"></a> -->
   </div>
   <div class="gap-6 pt-2 columns-3xs" *ngIf="articles; else loading">
     <figure

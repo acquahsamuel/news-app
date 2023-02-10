@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { NewsService } from "src/app/shared/services/news.service";
 
 interface IArticle {
@@ -20,6 +20,8 @@ interface IArticle {
 })
 export class BlogComponent implements OnInit {
   articles!: any;
+  categories = ["Apple", "Tesla", "Business Insider", "Tech Crunch"];
+
   @Input() date?: string;
   @Input() author?: string;
   @Input() title?: string;
@@ -30,27 +32,58 @@ export class BlogComponent implements OnInit {
   @Input() publishedAt?: string;
   @Input() source?: string;
 
-  constructor(private newService: NewsService, private router: Router) {}
+  constructor(
+    private newService: NewsService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.getAllNews();
+    this.categoriesFilter("Apple");
   }
 
-  getAllNews() {
-    this.newService.getAllNews().subscribe((xresponse: any) => {
+  getAllAppleNews() {
+    this.newService.getAppleNews().subscribe((xresponse: any) => {
       console.log(xresponse);
       this.articles = xresponse?.articles;
     });
   }
 
-  renderDescription(template: any) {
-    // template.innerHTML = this.articles.content;
+  getTeslaNews() {
+    this.newService.getTeslaNews().subscribe((xresponse: any) => {
+      this.articles = xresponse?.articles;
+    });
   }
 
- 
+  getBusinessInsider() {
+    this.newService.businessNews().subscribe((xresponse: any) => {
+      this.articles = xresponse?.articles;
+    });
+  }
 
-  goToLink(url: string){
+  getTechCruch() {
+    this.newService.techCrunchNews().subscribe((xresponse: any) => {
+      this.articles = xresponse?.articles;
+    });
+  }
+
+
+  categoriesFilter(category: string) {
+    if (category === "Apple") {
+      this.getAllAppleNews();
+    } else if (category === "Tesla") {
+      this.getTeslaNews();
+    } else if (category === "Business Insider") {
+      this.getBusinessInsider();
+    } else if ("Tech Crunch") {
+      this.getTechCruch();
+    } else {
+      this.getAllAppleNews();
+    }
+  }
+
+
+  goToLink(url: string) {
     window.open(url, "_blank");
   }
-  
 }
