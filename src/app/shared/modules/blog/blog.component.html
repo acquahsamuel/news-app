@@ -1,7 +1,7 @@
 <main class="py-1 px-4 mx-auto max-w-7xl">
   <div class="flex gap-x-8 items-center pt-12">
     <a
-      class="text-lg font-medium"
+      class="text-md text-red-700 font-medium"
       *ngFor="let category of categories; let i = index"
       (click)="categoriesFilter(category)"
        routerLinkActive="category"
@@ -12,7 +12,7 @@
   <div class="gap-6 pt-2 columns-3xs" *ngIf="articles; else loading">
     <figure
       *ngFor="let article of articles; let i = index"
-      class="py-4 [break-inside:avoid]"
+      class="py-4  [break-inside:avoid]"
     >
       <img
         class="rounded-md"
@@ -20,16 +20,16 @@
         [alt]="article.content"
         (click)="goToLink(article.url)"
       />
-      <figcaption class="mt-2" (click)="goToLink(article.url)">
+      <figcaption class="mt-2 text-green-600" (click)="goToLink(article.url)">
         {{ article.author }}
       </figcaption>
       <p class="text-sm text-gray-500 line-clamp-2">
         {{ article.description }}
       </p>
-      <p class="text-sm text-gray-500 line-clamp-2">
+      <p class="text-sm text-gray-700 line-clamp-2">
         Tag: {{ article.source.id }},{{ article.source.name }}
       </p>
-      <p class="text-sm text-gray-500 line-clamp-2">
+      <p class="text-sm text-gray-700 line-clamp-2">
         {{ article.publishedAt | date : "medium" }}
       </p>
     </figure>
