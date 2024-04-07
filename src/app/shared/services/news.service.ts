@@ -1,16 +1,15 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-
-// -L8QNVBycBBCj3G
-// 9e32cd9f972d47c98aa6fb3e953cbe48
-// https://newsapi.org/v2/everything?q=tesla&from=2024-03-07&sortBy=publishedAt&apiKey=9e32cd9f972d47c98aa6fb3e953cbe48
+ 
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class NewsService {
+
+
   public baseURL = `https://newsapi.org/v2`;
 
   public start_from = `2024-04-06`;
@@ -19,7 +18,9 @@ export class NewsService {
   public appleURL =  `${this.baseURL}/everything?q=apple&from=${this.start_from}&to=${this.start_to}&sortBy=popularity&apiKey=${environment.API_KEY}`;
 
   public teslaURL = `${this.baseURL}/everything?q=tesla&from=2024-03-07&sortBy=publishedAt&apiKey=${environment.API_KEY}`;
+
   public businessURL = `${this.baseURL}/top-headlines?country=us&category=business&apiKey=${environment.API_KEY}`;
+  
   public techCrunchURL  = `${this.baseURL}/top-headlines?sources=techcrunch&apiKey=${environment.API_KEY}`;
 
 

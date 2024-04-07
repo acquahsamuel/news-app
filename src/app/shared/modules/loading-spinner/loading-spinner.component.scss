@@ -12,8 +12,8 @@
 }
 .loader:before {
     content: "";
-    border-left: 24px solid rgb(27, 51, 190);
-    border-right: 24px solid rgb(74, 159, 199);
+    border-left: 24px solid rgb(15, 126, 11);
+    border-right: 24px solid rgb(74, 199, 84);
     position: absolute;
     height: 24px;
     width: 0;
@@ -22,11 +22,13 @@
     top: 0px;
     animation: splitX 1s linear infinite alternate;
 }
+
+
 .loader:after {
     content: "";
     width: 48px;
     height: 24px;
-    background: rgb(35, 87, 184);
+    background: rgb(0, 4, 10);
     position: absolute;
     left: 0;
     bottom: 0;

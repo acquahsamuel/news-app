@@ -1,12 +1,11 @@
 <main class="py-1 px-4 mx-auto max-w-7xl">
-  <div class="flex gap-x-8 items-center pt-12">
+  <div class="flex gap-x-5 items-center pt-12">
     <a
-      class="text-md text-red-700 font-medium"
+      class="text-md text-green-700 font-medium md:text-sm hover:cursor-pointer"
       *ngFor="let category of categories; let i = index"
       (click)="categoriesFilter(category)"
        routerLinkActive="category"
-      >{{ category }}</a
-    >
+      >{{ category }}</a>
     <!-- <a href="#" class="text-lg text-indigo-500"></a> -->
   </div>
   <div class="gap-6 pt-2 columns-3xs" *ngIf="articles; else loading">
