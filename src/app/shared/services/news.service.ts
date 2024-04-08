@@ -9,6 +9,8 @@ import { environment } from 'src/environments/environment';
 })
 export class NewsService {
 
+  // This code is not in best refactored format
+  // You can expand the code into more modular structure
 
   public baseURL = `https://newsapi.org/v2`;
 
